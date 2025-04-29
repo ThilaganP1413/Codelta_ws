@@ -1,0 +1,15 @@
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/ament_index/resource_index/package_run_dependencies/delta_description
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/ament_index/resource_index/parent_prefix_path/delta_description
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/environment/ament_prefix_path.sh
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/environment/ament_prefix_path.dsv
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/environment/path.sh
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/environment/path.dsv
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/local_setup.bash
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/local_setup.sh
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/local_setup.zsh
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/local_setup.dsv
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/package.dsv
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/ament_index/resource_index/packages/delta_description
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/cmake/delta_descriptionConfig.cmake
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/cmake/delta_descriptionConfig-version.cmake
+/home/thilaks/ROS2/Codelta_ws/install/delta_description/share/delta_description/package.xml
