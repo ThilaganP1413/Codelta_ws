@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/delta_gz_sim/delta_gz_sim.egg-info/PKG-INFO
+../../build/delta_gz_sim/delta_gz_sim.egg-info/SOURCES.txt
+../../build/delta_gz_sim/delta_gz_sim.egg-info/dependency_links.txt
+../../build/delta_gz_sim/delta_gz_sim.egg-info/entry_points.txt
+../../build/delta_gz_sim/delta_gz_sim.egg-info/requires.txt
+../../build/delta_gz_sim/delta_gz_sim.egg-info/top_level.txt
+../../build/delta_gz_sim/delta_gz_sim.egg-info/zip-safe
+delta_gz_sim/__init__.py
+resource/delta_gz_sim
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

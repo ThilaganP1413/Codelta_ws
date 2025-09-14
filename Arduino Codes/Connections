@@ -1,0 +1,20 @@
+Motor 1
+DIR : D13 (white)
+PUL : D12 (violet)
+
+Motor 2
+DIR : D11 (blue)
+PUL : D10 (brown)
+
+Motor 3
+DIR : D9 (orange)
+PUL : D8 (green)
+
+Limit Switch
+1 : D4
+2 : D3
+3 : D2
+
+Relay:
+Conveyor : D7
+Suction : D5

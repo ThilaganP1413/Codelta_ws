@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/delta_gz_sim/delta_gz_sim.egg-info
+writing ../../build/delta_gz_sim/delta_gz_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/delta_gz_sim/delta_gz_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/delta_gz_sim/delta_gz_sim.egg-info/entry_points.txt
+writing requirements to ../../build/delta_gz_sim/delta_gz_sim.egg-info/requires.txt
+writing top-level names to ../../build/delta_gz_sim/delta_gz_sim.egg-info/top_level.txt
+writing manifest file '../../build/delta_gz_sim/delta_gz_sim.egg-info/SOURCES.txt'
+reading manifest file '../../build/delta_gz_sim/delta_gz_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/delta_gz_sim/delta_gz_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim/build
+creating /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim/build/lib
+creating /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim/build/lib/delta_gz_sim
+copying delta_gz_sim/__init__.py -> /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim/build/lib/delta_gz_sim
+running install
+running install_lib
+creating /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/lib/python3.10/site-packages/delta_gz_sim
+copying /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim/build/lib/delta_gz_sim/__init__.py -> /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/lib/python3.10/site-packages/delta_gz_sim
+byte-compiling /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/lib/python3.10/site-packages/delta_gz_sim/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/share/ament_index
+creating /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/share/ament_index/resource_index
+creating /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/share/ament_index/resource_index/packages
+copying resource/delta_gz_sim -> /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/share/ament_index/resource_index/packages
+copying package.xml -> /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/share/delta_gz_sim
+running install_egg_info
+Copying ../../build/delta_gz_sim/delta_gz_sim.egg-info to /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim/lib/python3.10/site-packages/delta_gz_sim-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim/install.log'

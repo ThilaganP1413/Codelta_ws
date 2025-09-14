@@ -1,0 +1,4 @@
+source;share/delta_gz_sim_cpp/local_setup.bash
+source;share/delta_gz_sim_cpp/local_setup.dsv
+source;share/delta_gz_sim_cpp/local_setup.sh
+source;share/delta_gz_sim_cpp/local_setup.zsh

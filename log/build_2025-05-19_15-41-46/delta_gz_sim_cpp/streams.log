@@ -1,0 +1,26 @@
+[0.269s] Invoking command in '/home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim:/opt/ros/humble /usr/bin/cmake --build /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp -- -j12 -l12
+[0.329s] Invoked command in '/home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim:/opt/ros/humble /usr/bin/cmake --build /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp -- -j12 -l12
+[0.341s] Invoking command in '/home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim:/opt/ros/humble /usr/bin/cmake --install /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp
+[0.355s] -- Install configuration: ""
+[0.356s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/launch
+[0.356s] -- Installing: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/launch/delta_gzsim.launch.py
+[0.356s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/configs
+[0.356s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/configs/ros_ign_sim.yaml
+[0.356s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/descriptions
+[0.356s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/descriptions/robot.sdf
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/ament_index/resource_index/package_run_dependencies/delta_gz_sim_cpp
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/ament_index/resource_index/parent_prefix_path/delta_gz_sim_cpp
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/environment/ament_prefix_path.sh
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/environment/ament_prefix_path.dsv
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/environment/path.sh
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/environment/path.dsv
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/local_setup.bash
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/local_setup.sh
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/local_setup.zsh
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/local_setup.dsv
+[0.357s] -- Installing: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/package.dsv
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/ament_index/resource_index/packages/delta_gz_sim_cpp
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/cmake/delta_gz_sim_cppConfig.cmake
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/cmake/delta_gz_sim_cppConfig-version.cmake
+[0.357s] -- Up-to-date: /home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim_cpp/share/delta_gz_sim_cpp/package.xml
+[0.360s] Invoked command in '/home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thilaks/ROS2/Codelta_ws/install/delta_gz_sim:/opt/ros/humble /usr/bin/cmake --install /home/thilaks/ROS2/Codelta_ws/build/delta_gz_sim_cpp
