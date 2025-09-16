@@ -1,0 +1,685 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="default">
+
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="delta_robot_assembly">
+      <link name="base_link">
+        <inertial>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>1e-09</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-09</iyy>
+            <iyz>0</iyz>
+            <izz>1e-09</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="base_link_1">
+        <inertial>
+          <pose>0.3494977966357623 0.3432361202984264 0.4819202483989881 0.0 -0.0 0.0</pose>
+          <mass>71.18308896402961</mass>
+          <inertia>
+            <ixx>11.392706720580932</ixx>
+            <ixy>0.0046447258541668646</ixy>
+            <ixz>-0.0028404957779653017</ixz>
+            <iyy>11.350934194321848</iyy>
+            <iyz>0.11266229792210147</iyz>
+            <izz>9.05890184602292</izz>
+          </inertia>
+        </inertial>
+        <visual name="base_link_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/base_link_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="base_link_1__body1_collision">
+          <pose relative_to="__model__">0.35000000000106474 0.3499999999987788 0.3939999999999999 -0.0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.7879999999999998 0.6999999999999998 0.699999999998935</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="slider_link1_1">
+        <pose relative_to="__model__">0.34780325415210733 0.4950239806116981 0.5378245917610395 -0.7853981633982092 -1.776363001405215e-07 -3.1403043543892104</pose>
+        <inertial>
+          <pose>-0.0001487213218877015 0.004475107576853539 -0.012985332575154005 -0.7853977483549703 -0.0009110905827150976 3.140681813844602</pose>
+          <mass>0.820931758474227</mass>
+          <inertia>
+            <ixx>0.0003584828955229269</ixx>
+            <ixy>-7.997851128593858e-07</ixy>
+            <ixz>9.366685077560888e-08</ixz>
+            <iyy>0.0005531011996701141</iyy>
+            <iyz>-4.8615295028225924e-05</iyz>
+            <izz>0.0004692606138304023</izz>
+          </inertia>
+        </inertial>
+        <visual name="slider_link1_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/slider_link1_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="slider_link1_1__body1_collision">
+          <pose relative_to="__model__">0.3479474110228215 0.49955947631917724 0.5335243796920419 1.5707965776037827 -0.7853981635487765 -1.569507850348317</pose>
+          <geometry>
+            <box>
+              <size>0.06149530977075046 0.06700000000000286 0.09979999999999623</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="slider_link2_1">
+        <pose relative_to="__model__">0.48215461594607745 0.2661407844773314 0.5381195001033678 0.7853987670779256 0.0010988000647091667 -2.0920081801023565</pose>
+        <inertial>
+          <pose>0.00014872132188753582 -0.00447510757685371 -0.012985332575153843 0.4612282475770053 0.6606140638984149 2.253121651133508</pose>
+          <mass>0.8209317584742295</mass>
+          <inertia>
+            <ixx>0.0005053696469196067</ixx>
+            <ixy>-8.373668769169618e-05</ixy>
+            <ixz>-4.223551223078714e-05</ixz>
+            <iyy>0.0004062147088695345</iyy>
+            <iyz>2.4074325194411994e-05</iyz>
+            <izz>0.00046926035323441306</izz>
+          </inertia>
+        </inertial>
+        <visual name="slider_link2_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/slider_link2_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="slider_link2_1__body1_collision">
+          <pose relative_to="__model__">0.4860153721038691 0.2637565271210878 0.5338191288200081 3.140038732273916 -0.78539821717331 -0.5223106390844526</pose>
+          <geometry>
+            <box>
+              <size>0.06700000000000288 0.0997999999999962 0.061495310538202855</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="slider_link3_1">
+        <pose relative_to="__model__">0.21718042347900773 0.2647691774306645 0.5373818686512053 0.7853981662086265 7.498400310187254e-05 2.0957582079679855</pose>
+        <inertial>
+          <pose>0.0001487213218874248 -0.004475107576853682 -0.012985332575154065 0.4646430412132998 -0.6584142666838909 -2.2570356913505947</pose>
+          <mass>0.8209317584742296</mass>
+          <inertia>
+            <ixx>0.0005037381679205977</ixx>
+            <ixy>8.468107265507258e-05</ixy>
+            <ixz>4.204923338285704e-05</ixz>
+            <iyy>0.0004078459328090145</iyy>
+            <iyz>2.439906165109529e-05</iyz>
+            <izz>0.00046926060829396987</izz>
+          </inertia>
+        </inertial>
+        <visual name="slider_link3_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/slider_link3_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="slider_link3_1__body1_collision">
+          <pose relative_to="__model__">0.21318081311618364 0.262625695834607 0.5330816456315907 -3.141486627236058 -0.7853981040154782 0.5250368561466783</pose>
+          <geometry>
+            <box>
+              <size>0.06149531053820284 0.0997999999999962 0.06700000000000297</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="arm_link1a_1">
+        <pose relative_to="__model__">0.30844143958447434 0.5041656665732354 0.5081261139411967 -0.036497795201098034 -0.3027910161147327 -1.4270726178939155</pose>
+        <inertial>
+          <pose>2.7216190121026607e-08 -9.360810944089581e-09 -0.20000112474223394 0.3048470800727136 0.006567060101018613 1.4336502339986479</pose>
+          <mass>0.11023344349296764</mass>
+          <inertia>
+            <ixx>0.0035447006382666596</ixx>
+            <ixy>7.537301995012499e-06</ixy>
+            <ixz>2.1991415887795407e-05</ixz>
+            <iyy>0.0032222446233888397</iyy>
+            <iyz>-0.0010119734306200754</iyz>
+            <izz>0.000324516825885475</izz>
+          </inertia>
+        </inertial>
+        <visual name="arm_link1a_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/arm_link1a_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="arm_link1a_1__body1_collision">
+          <pose relative_to="__model__">0.3097548421627405 0.44413749910643413 0.31735165526224973 -1.6870749406753887 -1.2658807250664716 1.592672607751651</pose>
+          <geometry>
+            <box>
+              <size>0.43000000000000077 0.02999999999999996 0.010504818655834145</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="arm_link1b_1">
+        <pose relative_to="__model__">0.3874413740257488 0.5042674421819153 0.5081260999079421 0.003271229969696006 -0.30507542038583735 -1.5598223237173579</pose>
+        <inertial>
+          <pose>2.7216190095005754e-08 -9.360810742644818e-09 -0.20000112474223394 0.30502392828992747 0.00656719825647714 1.5603288492000735</pose>
+          <mass>0.11023344349296764</mass>
+          <inertia>
+            <ixx>0.0035447814580832904</ixx>
+            <ixy>7.023021602738794e-06</ixy>
+            <ixz>2.2154373611089906e-05</ixz>
+            <iyy>0.0032218110003372526</iyy>
+            <iyz>-0.0010124656171258666</iyz>
+            <izz>0.00032486962912042783</izz>
+          </inertia>
+        </inertial>
+        <visual name="arm_link1b_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/arm_link1b_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="arm_link1b_1__body1_collision">
+          <pose relative_to="__model__">0.38875480423619607 0.44420553758566256 0.3173622602596663 -1.5604087653882597 -1.2657039162575892 1.5926607834734468</pose>
+          <geometry>
+            <box>
+              <size>0.4300000000000007 0.0299999999999999 0.010504818655834072</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="arm_link2a_1">
+        <pose relative_to="__model__">0.5097362601955548 0.29571684015171285 0.5084642765443909 -0.01978818585703067 -0.3015746990951548 2.6833893994196405</pose>
+        <inertial>
+          <pose>2.721618996837094e-08 -9.360810887711069e-09 -0.20000112474223397 -0.1549311251193275 -0.2605180349501585 -2.6600465816632437</pose>
+          <mass>0.11023344349296764</mass>
+          <inertia>
+            <ixx>0.003306939398058782</ixx>
+            <ixy>0.00013749407009281886</ixy>
+            <ixz>-0.0008691607667208508</ixz>
+            <iyy>0.0034654786887836284</iyy>
+            <iyz>0.0005032224153670682</iyz>
+            <izz>0.00031904400069855676</izz>
+          </inertia>
+        </inertial>
+        <visual name="arm_link2a_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/arm_link2a_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="arm_link2a_1__body1_collision">
+          <pose relative_to="__model__">0.45822003197507 0.3255378496663343 0.31752767549193694 3.078067565882922 -1.2685928726943443 -0.5247350681386816</pose>
+          <geometry>
+            <box>
+              <size>0.4300000000000007 0.010504818655834143 0.029999999999999933</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="arm_link2b_1">
+        <pose relative_to="__model__">0.4703997000026872 0.22720678616653023 0.5083774713567594 -0.0011511023494246322 -0.30260531341686414 2.6207238383039986</pose>
+        <inertial>
+          <pose>2.721619003775988e-08 -9.360810917363998e-09 -0.20000112474223397 -0.15514696166236636 -0.2608640285471036 -2.6001564444018173</pose>
+          <mass>0.11023344349296764</mass>
+          <inertia>
+            <ixx>0.0033065375701777505</ixx>
+            <ixy>0.0001379834188045652</ixy>
+            <ixz>-0.0008702136066674401</ixz>
+            <iyy>0.0034650701262794008</iyy>
+            <iyz>0.0005037383788259863</iyz>
+            <izz>0.0003198543910838299</izz>
+          </inertia>
+        </inertial>
+        <visual name="arm_link2b_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/arm_link2b_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="arm_link2b_1__body1_collision">
+          <pose relative_to="__model__">0.4188166111424005 0.25706624999110644 0.31746493283783245 3.1379055240705016 -1.2681888913099804 -0.5247314516021894</pose>
+          <geometry>
+            <box>
+              <size>0.4300000000000005 0.010504818655834143 0.02999999999999996</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="arm_link3a_1">
+        <pose relative_to="__model__">0.22894840371823316 0.22610896080061071 0.5076863345711743 -7.869385280440312e-05 -0.3082789406780068 0.5249857583959131</pose>
+        <inertial>
+          <pose>2.721619010714882e-08 -9.360810891532881e-09 -0.20000112474223392 -0.1581933664072901 0.26571316574020204 -0.5461585047909796</pose>
+          <mass>0.11023344349296764</mass>
+          <inertia>
+            <ixx>0.0032979377103539882</ixx>
+            <ixy>-0.00014297640702708864</ixy>
+            <ixz>0.0008844302004931033</ixz>
+            <iyy>0.003462171354069607</iyy>
+            <iyz>0.0005119565391973908</iyz>
+            <izz>0.00033135302311738946</izz>
+          </inertia>
+        </inertial>
+        <visual name="arm_link3a_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/arm_link3a_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="arm_link3a_1__body1_collision">
+          <pose relative_to="__model__">0.28146789818603857 0.2565101196677232 0.31711489851533997 -0.0002471293728717765 -1.2625173764597195 -2.6168662520097126</pose>
+          <geometry>
+            <box>
+              <size>0.4300000000000007 0.010504818655834141 0.029999999999999995</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="arm_link3b_1">
+        <pose relative_to="__model__">0.18935518231463902 0.2944710612934693 0.5076804108349484 -7.869868029096733e-05 -0.3084715188338619 0.5249857743013899</pose>
+        <inertial>
+          <pose>2.7216190134904394e-08 -9.360810843018222e-09 -0.20000112474223394 -0.15829703583210625 0.2658777274446187 -0.546185736350577</pose>
+          <mass>0.11023344349296764</mass>
+          <inertia>
+            <ixx>0.0032976428606011667</ixx>
+            <ixy>-0.0001431471333280688</ixy>
+            <ixz>0.000884910697906212</ixz>
+            <iyy>0.0034620724987476335</iyy>
+            <iyz>0.0005122348625858659</iyz>
+            <izz>0.0003317467281921671</izz>
+          </inertia>
+        </inertial>
+        <visual name="arm_link3b_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/arm_link3b_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="arm_link3b_1__body1_collision">
+          <pose relative_to="__model__">0.241906433368947 0.3248906136095734 0.31712066469344274 -0.0002469800104367086 -1.2623247983091452 -2.6168660952527256</pose>
+          <geometry>
+            <box>
+              <size>0.4300000000000007 0.010504818655834178 0.030000000000000075</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="ee_plate_link_1">
+        <pose relative_to="__model__">0.3505864803840645 0.3421264897847234 0.12657057783542397 0.00041025645270537244 -0.0002686584901395394 0.0004341943281468429</pose>
+        <inertial>
+          <pose>1.6966200715390692e-13 3.855624858013079e-14 -5.635411842036531e-16 -0.0004103730788113827 0.00026848031118547456 -0.0004343045261345789</pose>
+          <mass>0.6272585071431402</mass>
+          <inertia>
+            <ixx>0.0005722425747284321</ixx>
+            <ixy>-1.3313481872501143e-08</ixy>
+            <ixz>-1.4909273126847977e-07</ixz>
+            <iyy>0.0005722579919173049</iyy>
+            <iyz>-2.2787754904232682e-07</iyz>
+            <izz>0.0011275427304347219</izz>
+          </inertia>
+        </inertial>
+        <visual name="ee_plate_link_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/ee_plate_link_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="ee_plate_link_1__body1_collision">
+          <pose relative_to="__model__">0.35707993001767624 0.3458792449072513 0.12657386122965042 0.4674166916230358 -1.5703059312435994 -2.1501429368463914</pose>
+          <geometry>
+            <box>
+              <size>0.01899061951096195 0.13123675342886001 0.11799036216003081</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      
+      <link name="vaccum_ee_link_1">
+        <pose relative_to="__model__">0.3505939978326873 0.3421379802301937 0.09857058120225069 0.00041025644384673737 -0.0002686584902740038 0.0004341943281467877</pose>
+        <inertial>
+          <pose>3.89161535570455e-13 -2.483527570878649e-13 0.028426611618866688 -0.0004103730699528066 0.0002684803113237863 -0.0004343045261322004</pose>
+          <mass>0.04578045780892627</mass>
+          <inertia>
+            <ixx>1.6630605577354872e-05</ixx>
+            <ixy>-8.77950056404897e-12</ixy>
+            <ixz>4.175328609766493e-09</ixz>
+            <iyy>1.664687389476595e-05</iyy>
+            <iyz>6.388682802400958e-09</iyz>
+            <izz>1.0788857168608085e-06</izz>
+          </inertia>
+        </inertial>
+        <visual name="vaccum_ee_link_1__body1_visual">
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>meshes/vaccum_ee_link_1/body1_visual.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="vaccum_ee_link_1__body1_collision">
+          <pose relative_to="__model__">0.3505847347069292 0.34212382235750133 0.13307057706150682 0.9914517220301348 -1.5703059317909835 -2.150140986648011</pose>
+          <geometry>
+            <box>
+              <size>0.06899999999097553 0.02499999999999993 0.024999998821122422</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Arm1b_Dummy"/>
+      <link name="Arm2a_Dummy"/>
+      <link name="Arm2b_Dummy"/>
+      <link name="Arm3a_Dummy"/>
+      <link name="Arm3b_Dummy"/>
+      
+      <joint name="slider_link1_joint" type="prismatic">
+        <pose relative_to="__model__">0.34776307542506724 0.5262156832676276 0.5690163202945615 0.0 -0.0 0.0</pose>
+        <parent>base_link_1</parent>
+        <child>slider_link1_1</child>
+        <axis>
+          <xyz expressed_in="__model__">0.0009108392412098171 -0.7071061945501054 -0.7071067811870746</xyz>
+          <limit>
+            <lower>-0.10</lower>
+            <upper>0.0</upper>
+          </limit>
+          <dynamics>
+            <damping>200</damping>
+            <friction>25</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      
+      <joint name="slider_link2_joint" type="prismatic">
+        <pose relative_to="__model__">0.5089318971383543 0.25072686967881525 0.5690162888922229 0.0 -0.0 0.0</pose>
+        <parent>base_link_1</parent>
+        <child>slider_link2_1</child>
+        <axis>
+          <xyz expressed_in="__model__">-0.6128273472747638 0.35276428735485094 -0.7071067811859821</xyz>
+          <limit>
+            <lower>-0.10</lower>
+            <upper>0.0</upper>
+          </limit>
+          <dynamics>
+            <damping>200</damping>
+            <friction>25</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      
+      <joint name="slider_link3_joint" type="prismatic">
+        <pose relative_to="__model__">0.18978587858431126 0.24890584451269063 0.5690379331768775 0.0 -0.0 0.0</pose>
+        <parent>base_link_1</parent>
+        <child>slider_link3_1</child>
+        <axis>
+          <xyz expressed_in="__model__">0.6119165080311094 0.35434190720141434 -0.707106781186461</xyz>
+          <limit>
+            <lower>-0.10</lower>
+            <upper>0.0</upper>
+          </limit>
+          <dynamics>
+            <damping>200</damping>
+            <friction>25</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      
+      <joint name="arm1a_ball_joint" type="ball">
+        <pose relative_to="__model__">0.30844143958447456 0.5041656665732352 0.5081261139411966 0.0 -0.0 0.0</pose>
+        <parent>slider_link1_1</parent>
+        <child>arm_link1a_1</child>
+
+      </joint>
+      
+      <joint name="arm1b_ball_joint" type="ball">
+        <pose relative_to="__model__">0.387441374025749 0.5042674421819149 0.508126099907942 0.0 -0.0 0.0</pose>
+        <parent>slider_link1_1</parent>
+        <child>arm_link1b_1</child>
+
+      </joint>
+      <joint name="arm2a_ball_joint" type="ball">
+        <pose relative_to="__model__">0.5097362601955546 0.295716840151713 0.5084642765443905 0.0 -0.0 0.0</pose>
+        <parent>slider_link2_1</parent>
+        <child>arm_link2a_1</child>
+
+      </joint>
+      <joint name="arm2b_ball_joint" type="ball">
+        <pose relative_to="__model__">0.4703997000026871 0.22720678616653003 0.5083774713567594 0.0 -0.0 0.0</pose>
+        <parent>slider_link2_1</parent>
+        <child>arm_link2b_1</child>
+      </joint>
+      <joint name="arm3a_ball_joint" type="ball">
+        <pose relative_to="__model__">0.22894840371823316 0.22610896080061088 0.5076863345711743 0.0 -0.0 0.0</pose>
+        <parent>slider_link3_1</parent>
+        <child>arm_link3a_1</child>
+      </joint>
+      <joint name="arm3b_ball_joint" type="ball">
+        <pose relative_to="__model__">0.1893551823146391 0.29447106129346945 0.5076804108349481 0.0 -0.0 0.0</pose>
+        <parent>slider_link3_1</parent>
+        <child>arm_link3b_1</child>
+      </joint>
+      <joint name="ee1a_ball_joint" type="ball">
+        <pose relative_to="__model__">0.31106824474406514 0.38410933161437655 0.12657719659127076 0.0 -0.0 0.0</pose>
+        <parent>arm_link1a_1</parent>
+        <child>ee_plate_link_1</child>
+
+      </joint>
+      <joint name="ee3a_ball_joint" type="ball">
+        <pose relative_to="__model__">0.3339873926761166 0.286911278547053 0.12654346246759246 0.0 -0.0 0.0</pose>
+        <parent>ee_plate_link_1</parent>
+        <child>Arm3a_Dummy</child>
+
+      </joint>
+      <joint name="ee2a_ball_joint" type="ball">
+        <pose relative_to="__model__">0.4067038037320244 0.35535885919274135 0.1265910744474106 0.0 -0.0 0.0</pose>
+        <parent>ee_plate_link_1</parent>
+        <child>Arm2a_Dummy</child>
+
+      </joint>
+      <joint name="ee1b_ball_joint" type="ball">
+        <pose relative_to="__model__">0.39006823444633126 0.38414363296398174 0.12659842061939408 0.0 -0.0 0.0</pose>
+        <parent>ee_plate_link_1</parent>
+        <child>Arm1b_Dummy</child>
+
+      </joint>
+      <joint name="ee3b_ball_joint" type="ball">
+        <pose relative_to="__model__">0.29445768444552606 0.35531016593789405 0.12656091856002896 0.0 -0.0 0.0</pose>
+        <parent>ee_plate_link_1</parent>
+        <child>Arm3b_Dummy</child>
+
+      </joint>
+      <joint name="ee2b_ball_joint" type="ball">
+        <pose relative_to="__model__">0.3672335222603396 0.28692571382885584 0.12655239432684837 0.0 -0.0 0.0</pose>
+        <parent>ee_plate_link_1</parent>
+        <child>Arm2b_Dummy</child>
+
+      </joint>
+      <joint name="vaccum_joint" type="fixed">
+        <pose relative_to="__model__">0.3505864803840645 0.3421264897847234 0.12657057783542397 0.0 -0.0 0.0</pose>
+        <parent>ee_plate_link_1</parent>
+        <child>vaccum_ee_link_1</child>
+        <axis/>
+      </joint>
+      <joint name="base_link_joint" type="fixed">
+        <parent>base_link</parent>
+        <child>base_link_1</child>
+        <axis/>
+      </joint>
+
+      <plugin filename="ignition-gazebo-detachable-joint-system"
+                name="ignition::gazebo::systems::DetachableJoint">
+        <parent_link>Arm1b_Dummy</parent_link>
+        <child_model>delta_robot_assembly</child_model>
+        <child_link>arm_link1b_1</child_link>
+        <attach_topic>/close_loop_1b</attach_topic>
+        <detach_topic>/open_loop_1b</detach_topic>
+        <output_topic>/loop_state_1b</output_topic>
+      </plugin>
+
+      <plugin filename="ignition-gazebo-detachable-joint-system"
+                name="ignition::gazebo::systems::DetachableJoint">
+        <parent_link>Arm2a_Dummy</parent_link>
+        <child_model>delta_robot_assembly</child_model>
+        <child_link>arm_link2a_1</child_link>
+        <attach_topic>/close_loop_2a</attach_topic>
+        <detach_topic>/open_loop_2a</detach_topic>
+        <output_topic>/loop_state_2a</output_topic>
+      </plugin>
+
+      <plugin filename="ignition-gazebo-detachable-joint-system"
+                name="ignition::gazebo::systems::DetachableJoint">
+        <parent_link>Arm2b_Dummy</parent_link>
+        <child_model>delta_robot_assembly</child_model>
+        <child_link>arm_link2b_1</child_link>
+        <attach_topic>/close_loop_2b</attach_topic>
+        <detach_topic>/open_loop_2b</detach_topic>
+        <output_topic>/loop_state_2b</output_topic>
+      </plugin>
+
+      <plugin filename="ignition-gazebo-detachable-joint-system"
+                name="ignition::gazebo::systems::DetachableJoint">
+        <parent_link>Arm3a_Dummy</parent_link>
+        <child_model>delta_robot_assembly</child_model>
+        <child_link>arm_link3a_1</child_link>
+        <attach_topic>/close_loop_3a</attach_topic>
+        <detach_topic>/open_loop_3a</detach_topic>
+        <output_topic>/loop_state_3a</output_topic>
+      </plugin>
+
+      <plugin filename="ignition-gazebo-detachable-joint-system"
+                name="ignition::gazebo::systems::DetachableJoint">
+        <parent_link>Arm3b_Dummy</parent_link>
+        <child_model>delta_robot_assembly</child_model>
+        <child_link>arm_link3b_1</child_link>
+        <attach_topic>/close_loop_3b</attach_topic>
+        <detach_topic>/open_loop_3b</detach_topic>
+        <output_topic>/loop_state_3b</output_topic>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>slider_link1_joint</joint_name>
+        <!-- <topic>rotor_cmd</topic> -->
+        <p_gain>1500</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>5</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>slider_link2_joint</joint_name>
+        <!-- <topic>rotor_cmd</topic> -->
+        <p_gain>1500</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>5</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>slider_link3_joint</joint_name>
+        <!-- <topic>rotor_cmd</topic> -->
+        <p_gain>1500</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>5</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+
+    </model>
+
+  </world>
+</sdf>
